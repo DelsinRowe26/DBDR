@@ -33,30 +33,6 @@ namespace DBDR
             sqlconn = new SqlConnection(connect);
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            string reff;
-            string sql = "SELECT * FROM [dbo].[DRTable]";
-            using (SqlDataAdapter dataAdapter = new SqlDataAdapter(sql, sqlconn))
-            {
-                DataTable dTab = new DataTable();
-                //dataAdapter.SelectCommand = new SqlCommand(sql, sqlconn);
-                dataAdapter.Fill(dTab);
-
-                reff = dTab.Rows[0][0].ToString();
-                
-                this.dataGridView1.DataSource = reff;
-                MessageBox.Show(reff);
-            }
-            /*sqlconn.Open();
-            
-            
-            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter();
-            sqlDataAdapter.SelectCommand = new SqlCommand(sql, sqlconn);
-            
-            sqlconn.Close();*/
-        }
-
         private void fillToolStripButton_Click(object sender, EventArgs e)
         {
             try
