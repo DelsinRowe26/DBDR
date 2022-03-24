@@ -38,9 +38,8 @@ namespace DBDR
                 {
                     MessageBox.Show("Добро пожаловать " + table.Rows[0][1].ToString(), "Сообщение", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1,
         MessageBoxOptions.DefaultDesktopOnly);
-
-
-
+                    Form2 newForm = new Form2();
+                    newForm.Show();
                 }
             }
 
